@@ -20,6 +20,7 @@ public class Controller implements Initializable {
 
     @FXML
     private TextField txt_result;
+
     @FXML
     private Button btnAccedi;
 
