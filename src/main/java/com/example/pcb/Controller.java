@@ -29,6 +29,12 @@ public class Controller implements Initializable {
     @FXML
     private Button btnClose;
 
+    @FXML
+    private Button try1;
+
+    @FXML
+    private Button ovw;
+
     private Stage stage;
     private Scene scene;
     private Parent root;
@@ -69,6 +75,45 @@ public class Controller implements Initializable {
 
     }
 
+    public void switchToBudget(ActionEvent event) throws IOException {
+        root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("Budget.fxml")));
+        scene = new Scene(root);
+        stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+        stage.setScene(scene);
+        stage.show();
+
+    }
+
+    public void switchToUtilizzo(ActionEvent event) throws IOException {
+        root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("Utilizzo.fxml")));
+        scene = new Scene(root);
+        stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+        stage.setScene(scene);
+        stage.show();
+
+    }
+
+    public void switchToConferma(ActionEvent event) throws IOException {
+        root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("Conferma.fxml")));
+        scene = new Scene(root);
+        stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+        stage.setScene(scene);
+        stage.show();
+
+    }
+
+    public void switchToComponenti(ActionEvent event) throws IOException {
+        root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("Componenti.fxml")));
+        scene = new Scene(root);
+        stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+        stage.setScene(scene);
+        stage.show();
+
+    }
+
+    public void sovrascrivi(ActionEvent event) throws IOException{
+        ovw.setText(try1.getText());
+    }
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
 

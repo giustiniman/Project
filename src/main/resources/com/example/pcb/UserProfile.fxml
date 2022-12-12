@@ -24,7 +24,7 @@
             <Image url="@5340287_man_people_person_user_users_icon.png" />
          </image>
       </ImageView>
-      <Button layoutX="1005.0" layoutY="630.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="136.0" text="Nuova Configurazione" />
+      <Button layoutX="1005.0" layoutY="630.0" mnemonicParsing="false" onAction="#switchToBudget" prefHeight="35.0" prefWidth="136.0" text="Nuova Configurazione" />
       <Button layoutX="753.0" layoutY="630.0" mnemonicParsing="false" onAction="#switchToEntry" prefHeight="35.0" prefWidth="136.0" text="Configurazioni Salvate" />
       <Button layoutX="81.0" layoutY="901.0" mnemonicParsing="false" onAction="#switchToAccedi" style="-fx-background-color: transparent; -fx-text-fill: transparent; -fx-border-fill: transparent;" text="Button">
          <graphic>

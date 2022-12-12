@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.pcb.Controller">
+   <children>
+      <ImageView fitHeight="1080.0" fitWidth="1920.0">
+         <image>
+            <Image url="@6839531-grey-wallpaper.jpg" />
+         </image>
+      </ImageView>
+      <Button layoutX="1016.0" layoutY="685.0" mnemonicParsing="false" prefHeight="77.0" prefWidth="338.0" text="Lavoro">
+         <font>
+            <Font size="36.0" />
+         </font>
+      </Button>
+      <Button layoutX="398.0" layoutY="685.0" mnemonicParsing="false" onAction="#switchToEntry" prefHeight="77.0" prefWidth="338.0" text="Comporre Musica">
+         <font>
+            <Font size="36.0" />
+         </font>
+      </Button>
+      <Button layoutX="710.0" layoutY="553.0" mnemonicParsing="false" onAction="#switchToEntry" prefHeight="77.0" prefWidth="338.0" text="Studio">
+         <font>
+            <Font size="36.0" />
+         </font>
+      </Button>
+      <Button layoutX="1016.0" layoutY="402.0" mnemonicParsing="false" onAction="#switchToEntry" prefHeight="77.0" prefWidth="338.0" text="Gaming">
+         <font>
+            <Font size="36.0" />
+         </font>
+      </Button>
+      <Button layoutX="398.0" layoutY="402.0" mnemonicParsing="false" onAction="#switchToEntry" prefHeight="77.0" prefWidth="338.0" text="Insegnamento">
+         <font>
+            <Font size="36.0" />
+         </font>
+      </Button>
+      <Button layoutX="81.0" layoutY="901.0" mnemonicParsing="false" onAction="#switchToBudget" style="-fx-background-color: transparent; -fx-text-fill: transparent; -fx-border-fill: transparent;" text="Button">
+         <graphic>
+            <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@216437_back_arrow_icon.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Text fill="#ccfd09" layoutX="1604.0" layoutY="61.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Selezione Utilizzo">
+         <font>
+            <Font size="36.0" />
+         </font>
+      </Text>
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="66.0" layoutY="48.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Logo.jpeg" />
+         </image>
+      </ImageView>
+      <Button layoutX="1536.0" layoutY="890.0" mnemonicParsing="false" onAction="#switchToEntry" style="-fx-background-color: transparent; -fx-text-fill: transparent; -fx-border-fill: transparent;" text="Button" />
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="1712.0" layoutY="875.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@1564506_close_exit_logout_power_icon.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

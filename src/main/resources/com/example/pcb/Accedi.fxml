@@ -27,8 +27,8 @@
       </ImageView>
       <Button layoutX="1520.0" layoutY="951.0" mnemonicParsing="false" prefHeight="64.0" prefWidth="173.0" text="Accedi con Google" />
       <Button layoutX="892.0" layoutY="705.0" mnemonicParsing="false" onAction="#switchToUserProfile" prefHeight="35.0" prefWidth="136.0" text="Accedi" />
-      <TextField layoutX="857.0" layoutY="561.0" prefHeight="47.0" prefWidth="206.0" text="UserName" />
-      <TextField layoutX="857.0" layoutY="621.0" prefHeight="47.0" prefWidth="206.0" text="Password" />
+      <TextField layoutX="857.0" layoutY="561.0" prefHeight="47.0" prefWidth="206.0" promptText="Username" />
+      <TextField layoutX="857.0" layoutY="621.0" prefHeight="47.0" prefWidth="206.0" promptText="Password" />
       <Button layoutX="81.0" layoutY="901.0" mnemonicParsing="false" onAction="#switchToEntry" style="-fx-background-color: transparent; -fx-text-fill: transparent; -fx-border-fill: transparent;" text="Button">
          <graphic>
             <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
