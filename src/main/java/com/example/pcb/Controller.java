@@ -7,6 +7,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.Node;
+import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 import javafx.scene.control.Button;
@@ -17,9 +18,6 @@ import java.util.Objects;
 import java.util.ResourceBundle;
 
 public class Controller implements Initializable {
-
-    @FXML
-    private TextField txt_result;
 
     @FXML
     private Button btnAccedi;
@@ -115,6 +113,8 @@ public class Controller implements Initializable {
     public void sovrascrivi(ActionEvent event) throws IOException{
         ovw.setText(try1.getText());
     }
+
+
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
 
