@@ -5,24 +5,34 @@ import java.sql.DriverManager;
 
 public class DBConnection {
 
-    public static Connection connection;
+    private static final String databaseName = "logindb";
+    private static final String databaseUser = "root";
+    private static final String databasePassword = "ciao";
+    private static final String url = "jdbc:mysql://localhost/"+ databaseName;
+    private static Connection connection;
 
-    public static Connection getConnectionInstance(){
+    private DBConnection(){
 
-        String databaseName = "logindb";
-        String databaseUser = "root";
-        String databasePassword = "ciao";
-        String url = "jdbc:mysql://localhost/"+ databaseName;
+    }
+
+    public static Connection getDBConnection(){
 
         try{
-            //Class.forName("com.mysql.cj.jdbc.Driver");
-            connection = DriverManager.getConnection(url, databaseUser, databasePassword);
+            if(connection==null){
+                connection = DriverManager.getConnection(url, databaseUser, databasePassword);
+
+            }
 
         }catch (Exception e){
             e.printStackTrace();
         }
-        return (Connection) connection;
+        return connection;
     }
+
+
+
+
+
 
 
 }
