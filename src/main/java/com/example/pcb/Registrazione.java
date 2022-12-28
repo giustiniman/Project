@@ -42,7 +42,16 @@ public class Registrazione {
         stage.show();
     }
 
-    public void registerUser(){
+    public void switchToUserProfile(ActionEvent event) throws IOException {
+        root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("UserProfile.fxml")));
+        scene = new Scene(root);
+        stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+        stage.setScene(scene);
+        stage.show();
+
+    }
+
+    public void registerUser(ActionEvent event){
 
         Connection myConnection = DBConnection.getDBConnection();
 
@@ -61,6 +70,7 @@ public class Registrazione {
 
             Statement statement = myConnection.createStatement();
             statement.executeUpdate(insertToRegister);
+            switchToUserProfile(event);
 
         }catch(Exception e){
             e.printStackTrace();
