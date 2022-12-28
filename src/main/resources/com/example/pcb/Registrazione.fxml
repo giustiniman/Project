@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.pcb.Registrazione">
+   <children>
+      <ImageView fitHeight="1080.0" fitWidth="1920.0">
+         <image>
+            <Image url="@6839531-grey-wallpaper.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="414.0" fitWidth="554.0" layoutX="753.0" layoutY="49.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@9043073_rhombus_icon.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="270.0" fitWidth="218.0" layoutX="851.0" layoutY="147.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@309041_users_group_people_icon.png" />
+         </image>
+      </ImageView>
+      <Button layoutX="1520.0" layoutY="951.0" mnemonicParsing="false" prefHeight="64.0" prefWidth="173.0" text="Accedi con Google" />
+      <Button layoutX="892.0" layoutY="773.0" mnemonicParsing="false" onAction="#registerUser" prefHeight="35.0" prefWidth="136.0" text="Registrati" />
+      <TextField fx:id="usernameTextField" layoutX="857.0" layoutY="632.0" prefHeight="47.0" prefWidth="206.0" promptText="Username" />
+      <Button layoutX="81.0" layoutY="901.0" mnemonicParsing="false" onAction="#switchToEntry" style="-fx-background-color: transparent; -fx-text-fill: transparent; -fx-border-fill: transparent;" text="Button">
+         <graphic>
+            <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@216437_back_arrow_icon.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Text fill="#ccfd09" layoutX="1716.0" layoutY="63.0" strokeType="OUTSIDE" strokeWidth="0.0" text="LOG IN">
+         <font>
+            <Font size="36.0" />
+         </font>
+      </Text>
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="66.0" layoutY="48.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Logo.jpeg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="54.0" fitWidth="48.0" layoutX="354.0" layoutY="374.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@5340287_man_people_person_user_users_icon.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="48.0" fitWidth="68.0" layoutX="500.0" layoutY="374.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@3643767_key_keys_main_password_privilege_icon.png" />
+         </image>
+      </ImageView>
+      <PasswordField fx:id="passwordPasswordField" layoutX="857.0" layoutY="691.0" prefHeight="47.0" prefWidth="206.0" promptText="Password" />
+      <TextField fx:id="lastnameTextField" layoutX="857.0" layoutY="573.0" prefHeight="47.0" prefWidth="206.0" promptText="Cognome" />
+      <TextField fx:id="firstnameTextField" layoutX="857.0" layoutY="513.0" prefHeight="47.0" prefWidth="206.0" promptText="Nome" />
+   </children>
+</AnchorPane>

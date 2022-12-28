@@ -18,7 +18,7 @@
             <Font name="System Bold" size="36.0" />
          </font>
       </Button>
-      <Button fx:id="btnRegistrati" layoutX="1120.0" layoutY="744.0" minHeight="30.0" minWidth="300.0" mnemonicParsing="false" prefHeight="85.0" prefWidth="217.0" text="Registrati">
+      <Button fx:id="btnRegistrati" layoutX="1120.0" layoutY="744.0" minHeight="30.0" minWidth="300.0" mnemonicParsing="false" onAction="#switchToRegistrati" prefHeight="85.0" prefWidth="217.0" text="Registrati">
          <font>
             <Font name="System Bold" size="36.0" />
          </font>

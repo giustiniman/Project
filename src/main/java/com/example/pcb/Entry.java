@@ -50,7 +50,7 @@ public class Entry implements Initializable {
 
 
     public void switchToRegistrati(ActionEvent event) throws IOException {
-        root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("Budget.fxml")));
+        root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("Registrazione.fxml")));
         scene = new Scene(root);
         stage = (Stage)((Node)event.getSource()).getScene().getWindow();
         stage.setScene(scene);
