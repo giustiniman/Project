@@ -61,18 +61,24 @@ public class Login {
         Connection myConnection = DBConnection.getDBConnection();
         //Connection connectDB = (Connection) myConnection.getInstance();
 
-        String verifyLoginQuery = "SELECT count(1) FROM UserAccounts WHERE username = '" + usernameTextField.getText() + "' AND password = '" + passwordPasswordField.getText() + "'";
+        String verifyLoginQuery = "SELECT count(1), Role FROM UserAccounts WHERE username = '" + usernameTextField.getText() + "' AND password = '" + passwordPasswordField.getText() + "'";
 
         try{
 
             Statement statement = myConnection.createStatement();
-            ResultSet queryResult = statement.executeQuery(verifyLoginQuery);
+            ResultSet queryLoginResult = statement.executeQuery(verifyLoginQuery);
 
-            while(queryResult.next()){
+            while(queryLoginResult.next()){
 
-                if(queryResult.getInt(1)==1){
-                    System.out.println("Benvenuto");
-                    switchToUserProfile(event);
+                if(queryLoginResult.getInt(1)==1){
+                    if(queryLoginResult.getString(2).equals("User")){
+                        System.out.println("Benvenuto USER");
+                        switchToUserProfile(event);
+                    }else if (queryLoginResult.getString(2).equals("Admin")) {
+                        System.out.println("Benvenuto ADMIN");
+                        switchToAdminProfile(event);
+                    }
+
 
                 }else{
                     System.out.println("Errore login");
