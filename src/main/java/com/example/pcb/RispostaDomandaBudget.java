@@ -1,16 +1,22 @@
 package com.example.pcb;
 
 import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Button;
 import javafx.stage.Stage;
 
 import java.io.IOException;
 import java.util.Objects;
 
-public class Domande {
+public class RispostaDomandaBudget {
+
+
+    public boolean rispostaBudget;
+    public BudgetBean budgetBean;
 
     private Stage stage;
     private Scene scene;
@@ -59,6 +65,23 @@ public class Domande {
 
     }
 
+
+
+
+
+    public void selezionaRisposteBudget(ActionEvent ae) throws IOException {
+        String risposta = ((Button)ae.getSource()).getText();
+        System.out.println("Budget selezionato: " + risposta);
+
+
+
+        BudgetBean b = new BudgetBean(risposta);
+
+        b.returnID();
+
+        switchToUtilizzo(ae);
+
+    }
 
 
 }

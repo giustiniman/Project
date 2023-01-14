@@ -7,34 +7,34 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.pcb.Domande">
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.pcb.RispostaDomandaBudget">
    <children>
       <ImageView fitHeight="1080.0" fitWidth="1920.0">
          <image>
             <Image url="@6839531-grey-wallpaper.jpg" />
          </image>
       </ImageView>
-      <Button layoutX="1220.0" layoutY="624.0" mnemonicParsing="false" onAction="#switchToUtilizzo" prefHeight="77.0" prefWidth="180.0" text="2200€">
+      <Button fx:id="budgetButton5" layoutX="1220.0" layoutY="624.0" mnemonicParsing="false" onAction="#selezionaRisposteBudget" prefHeight="77.0" prefWidth="180.0" text="€€€€€">
          <font>
             <Font size="36.0" />
          </font>
       </Button>
-      <Button layoutX="607.0" layoutY="631.0" mnemonicParsing="false" onAction="#switchToUtilizzo" prefHeight="77.0" prefWidth="180.0" text="1600€">
+      <Button fx:id="budgetButton4" layoutX="607.0" layoutY="631.0" mnemonicParsing="false" onAction="#selezionaRisposteBudget" prefHeight="77.0" prefWidth="180.0" text="€€€€">
          <font>
             <Font size="36.0" />
          </font>
       </Button>
-      <Button layoutX="919.0" layoutY="499.0" mnemonicParsing="false" onAction="#switchToUtilizzo" prefHeight="77.0" prefWidth="180.0" text="1200€">
+      <Button fx:id="budgetButton3" layoutX="919.0" layoutY="499.0" mnemonicParsing="false" onAction="#selezionaRisposteBudget" prefHeight="77.0" prefWidth="180.0" text="€€€">
          <font>
             <Font size="36.0" />
          </font>
       </Button>
-      <Button layoutX="1220.0" layoutY="341.0" mnemonicParsing="false" onAction="#switchToUtilizzo" prefHeight="77.0" prefWidth="180.0" text="900€">
+      <Button fx:id="budgetButton2" layoutX="1220.0" layoutY="341.0" mnemonicParsing="false" onAction="#selezionaRisposteBudget" prefHeight="77.0" prefWidth="180.0" text="€€">
          <font>
             <Font size="36.0" />
          </font>
       </Button>
-      <Button layoutX="607.0" layoutY="348.0" mnemonicParsing="false" onAction="#switchToUtilizzo" prefHeight="77.0" prefWidth="180.0" text="700€">
+      <Button fx:id="budgetButton1" layoutX="607.0" layoutY="348.0" mnemonicParsing="false" onAction="#selezionaRisposteBudget" prefHeight="77.0" prefWidth="180.0" text="€">
          <font>
             <Font size="36.0" />
          </font>
