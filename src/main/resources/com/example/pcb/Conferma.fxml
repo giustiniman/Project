@@ -54,8 +54,8 @@
             </ImageView>
          </graphic>
       </Button>
-      <TextField layoutX="716.0" layoutY="495.0" />
-      <TextField layoutX="1108.0" layoutY="494.0" />
+      <TextField fx:id="budgetTextField" layoutX="716.0" layoutY="495.0" />
+      <TextField fx:id="utilizzoTextField" layoutX="1108.0" layoutY="494.0" />
       <Text fill="LIME" layoutX="620.0" layoutY="391.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Budget Selezionato">
          <font>
             <Font size="36.0" />
