@@ -11,6 +11,9 @@ public class ConfermaBean {
         else{
             this.conferma = false;
         }
+        //DomandeUtente.raccogliValoreR(conferma);
+    }
+    public void conferma(){
         DomandeUtente.raccogliValoreR(conferma);
     }
 }

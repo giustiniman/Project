@@ -70,12 +70,12 @@ public class ConfermaRisposte {
     public void confermaRisposte(ActionEvent ae) throws IOException {
         String risposta = ((Button)ae.getSource()).getText();
 
-        UtilizzoBean u = new UtilizzoBean(risposta);
+        ConfermaBean c = new ConfermaBean(risposta);
 
 
-
-        u.returnStr();
+        c.conferma();
         //da sostituire con schermata riassunto
+        //HO SOSTITUITO VEDI SE VA BENE
         switchToComponenti(ae);
 
     }
