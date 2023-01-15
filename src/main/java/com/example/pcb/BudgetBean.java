@@ -2,22 +2,23 @@ package com.example.pcb;
 
 public class BudgetBean {
 
-    String risposta_budget;
+    public int ricercaValore;
 
     public BudgetBean(String risposta){
-        this.risposta_budget = risposta;
+        this.ricercaValore = risposta.length();
 
     }
 
+
     public void stampa(){
-        System.out.println("classe bean ha letto risposta: "+ risposta_budget);
+        System.out.println("classe bean ha letto risposta: "+ ricercaValore);
     }
 
     public void returnID(){
-
-        int id = risposta_budget.length();
-        System.out.println("Lunghezza stringa: " + id);
+        System.out.println("Lunghezza stringa: " + ricercaValore);
+        DomandeUtente.raccogliValoreB(ricercaValore);
 
     }
+
 }
 

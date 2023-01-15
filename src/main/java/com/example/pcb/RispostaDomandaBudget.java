@@ -9,13 +9,14 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.stage.Stage;
 
+
 import java.io.IOException;
 import java.util.Objects;
 
 public class RispostaDomandaBudget {
 
 
-    public boolean rispostaBudget;
+   // public boolean rispostaBudget;
     public BudgetBean budgetBean;
 
     private Stage stage;
@@ -56,15 +57,15 @@ public class RispostaDomandaBudget {
         stage.show();
     }
 
-    public void switchToBudget(ActionEvent event) throws IOException {
+    public void switchToBudget( ActionEvent event) throws IOException {
         root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("Budget.fxml")));
         scene = new Scene(root);
         stage = (Stage)((Node)event.getSource()).getScene().getWindow();
         stage.setScene(scene);
         stage.show();
 
-    }
 
+    }
 
 
 
@@ -73,15 +74,16 @@ public class RispostaDomandaBudget {
         String risposta = ((Button)ae.getSource()).getText();
         System.out.println("Budget selezionato: " + risposta);
 
-
-
         BudgetBean b = new BudgetBean(risposta);
-
+        DomandeUtente domandeUtente= new DomandeUtente();
+        //domandeUtente.add();
         b.returnID();
 
-        switchToUtilizzo(ae);
+        domandeUtente.attivo();
 
+        switchToUtilizzo(ae);
     }
+
 
 
 }

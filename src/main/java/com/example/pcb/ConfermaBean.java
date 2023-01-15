@@ -6,10 +6,11 @@ public class ConfermaBean {
 
     public ConfermaBean(String answer){
         if(answer.equals("Conferma")){
-            conferma = true;
+            this.conferma = true;
         }
         else{
-            conferma = false;
+            this.conferma = false;
         }
+        DomandeUtente.raccogliValoreR(conferma);
     }
 }
