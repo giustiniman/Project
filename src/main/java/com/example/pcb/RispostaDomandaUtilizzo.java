@@ -64,6 +64,15 @@ public class RispostaDomandaUtilizzo {
 
         }
 
+        public void switchToConferma(ActionEvent event) throws IOException {
+            root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("Conferma.fxml")));
+            scene = new Scene(root);
+            stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+            stage.setScene(scene);
+            stage.show();
+
+        }
+
 
 
 
@@ -76,8 +85,8 @@ public class RispostaDomandaUtilizzo {
 
 
             u.returnStr();
-            //da sostituire con schermata riassunto
-            switchToComponenti(ae);
+
+            switchToConferma(ae);
 
         }
 

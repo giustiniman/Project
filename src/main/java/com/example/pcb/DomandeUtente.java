@@ -1,7 +1,7 @@
 package com.example.pcb;
 
 public class DomandeUtente {
-    private int budget;
+    private static int budget;
     private static int a;
     String[] listaCaratteristicheUtilizzo= new String[9];
 

@@ -1,11 +1,13 @@
 package com.example.pcb;
 
 import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
 import java.io.IOException;
@@ -19,6 +21,13 @@ public class ConfermaRisposte {
     private Stage stage;
     private Scene scene;
     private Parent root;
+
+    @FXML
+    private TextField budgetTextField;
+
+    @FXML
+    private TextField utilizzoTextField;
+
 
     public void switchToUtilizzo(ActionEvent event) throws IOException {
         root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("Utilizzo.fxml")));
