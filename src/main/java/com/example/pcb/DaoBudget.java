@@ -4,7 +4,7 @@ import java.sql.*;
 import java.util.ArrayList;
 import java.util.Observer;
 
-public class DaoBudget {
+public class DaoBudget extends AbstractSubject{
     private static final String databaseName = "parametridb";
     private static final String databaseUser = "root";
     private static final String databasePassword = "ciao";
@@ -15,14 +15,21 @@ public class DaoBudget {
     private String budgetDaInserire;
     private String valoreNuovoBudget;
     private int budgetObs;
+    private static DaoBudget instance;
 
 
+    private DaoBudget() {
 
-    public DaoBudget() {
-
+        this.observers = new ArrayList<>();
 
     }
 
+    public static DaoBudget getInstance(){
+        if(instance==null){
+            instance = new DaoBudget();
+        }
+        return instance;
+    }
     public void setValoreRicercaBudget(int valore){
         this.valoreRicercaBudget = valore;
     }
@@ -68,10 +75,33 @@ public class DaoBudget {
         String updateBudgetQuery = "UPDATE parametri_budget SET Valore = '" + valoreNuovoBudget + "' WHERE idparametri_budget = " + valoreRicercaBudget;
         Statement statement = connection.createStatement();
         statement.executeUpdate(updateBudgetQuery);
+        notifyObservers(Integer.parseInt(valoreNuovoBudget));
 
     }
     public int returnValoreBudgetDB(){
         return Integer.parseInt(rispostaBudgetDB);
+    }
+
+    @Override
+    public void addObserver(AbstractObserver observer) {
+
+        observers.add(observer);
+    }
+
+    @Override
+    public void removeObserver(AbstractObserver observer) {
+        observers.remove(observer);
+    }
+
+    @Override
+    public void notifyObservers(int budget) {
+
+        System.out.println("subject invocato");
+        for (AbstractObserver observer : observers) {
+            observer.updateBudget(budget);
+            System.out.println("sono il subject");
+        }
+
     }
 
 

@@ -13,7 +13,7 @@ import java.io.IOException;
 import java.sql.SQLException;
 import java.util.Objects;
 
-public class InserisciBudgetGUI implements BudgetObserver {
+public class InserisciBudgetGUI extends AbstractObserver {
 
     private BeanSelezionaBudget riferimentoBeanVecchio;
     private String mostraVecchioB;
@@ -83,11 +83,18 @@ public class InserisciBudgetGUI implements BudgetObserver {
         String valoreInserito = newBudget.getText();
         BeanModificaBudget beanModificaBudget = new BeanModificaBudget();
         beanModificaBudget.prendiValoreInserito(valoreInserito);
+        System.out.println("budget inserito: " + valoreInserito);
+        System.out.println("budget nel bean: " + beanModificaBudget.returnBudgetInserito());
 
         //ModificaParametri modificaParametri = new ModificaParametri();
+
+        System.out.println("sto invocando add");
+        DaoBudget.getInstance().addObserver(this);
+        System.out.println("ho invocato add");
+
         modificaParametri.prendiRiferimentoBeanModificaBudget(beanModificaBudget);
 
-        modificaParametri.addObserver(observer);
+
     }
 
     @Override

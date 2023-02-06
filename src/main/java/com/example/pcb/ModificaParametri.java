@@ -49,7 +49,7 @@ public class ModificaParametri implements BudgetSubject{
         this.vecchioB = beanSelezionaBudget.returnB();
         this.idVecchioB = beanSelezionaBudget.returnB();
         //inserisciBudgetGUI.prendiRiferimentoCA();
-        DaoBudget daoBudgetAdmin = new DaoBudget();
+        DaoBudget daoBudgetAdmin = DaoBudget.getInstance();
         daoBudgetAdmin.setValoreRicercaBudget(vecchioB);
         DaoBudget.getDaoBudgetConnection();
         daoBudgetAdmin.cercaBudget();
@@ -124,7 +124,7 @@ public class ModificaParametri implements BudgetSubject{
 
     public void setNuovoB() throws SQLException {
         this.nuovoB = beanModificaBudget.returnBudgetInserito();
-        DaoBudget daoBudgetAdmin = new DaoBudget();
+        DaoBudget daoBudgetAdmin = DaoBudget.getInstance();
         System.out.println("modificaparametri idvecchiob = "+ idVecchioB);
         daoBudgetAdmin.setValoreRicercaBudget(idVecchioB);
         daoBudgetAdmin.setNuovoValoreBudget(nuovoB);
@@ -132,7 +132,7 @@ public class ModificaParametri implements BudgetSubject{
         daoBudgetAdmin.aggiornaBudget();
 
         //this.concreteSubjectBudget = new ConcreteSubjectBudget(nuovoB);
-        notifyObservers(Integer.parseInt(nuovoB));
+        //notifyObservers(Integer.parseInt(nuovoB));
 
         inviaBudgetPerModifica(daoBudgetAdmin);
     }
@@ -142,22 +142,5 @@ public class ModificaParametri implements BudgetSubject{
     }
 
 
-    @Override
-    public void addObserver(BudgetObserver observer) {
-        observers.add(observer);
-    }
 
-    @Override
-    public void removeObserver(BudgetObserver observer) {
-        observers.remove(observer);
-    }
-
-    @Override
-    public void notifyObservers(int budget) {
-
-        for (BudgetObserver observer : observers) {
-            observer.updateBudget(budget);
-        }
-
-    }
 }
