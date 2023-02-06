@@ -16,7 +16,7 @@ import java.util.Objects;
 public class ConfermaRisposte {
 
     public boolean rispostaBudget;
-    public BudgetBean budgetBean;
+    public BeanBudget budgetBean;
 
     private Stage stage;
     private Scene scene;
@@ -72,17 +72,28 @@ public class ConfermaRisposte {
 
     }
 
+    public void switchToConferma(ActionEvent event) throws IOException {
+        root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("Conferma.fxml")));
+        scene = new Scene(root);
+        stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+        stage.setScene(scene);
+        stage.show();
+
+    }
 
 
 
 
-    public void confermaRisposte(ActionEvent ae) throws IOException {
+
+    public void confermaRisposte(ActionEvent ae,DomandeUtente domandeUtente) throws IOException {
+        //switchToConferma(ae);
         String risposta = ((Button)ae.getSource()).getText();
 
         ConfermaBean c = new ConfermaBean(risposta);
 
 
-        c.conferma();
+        c.conferma(domandeUtente);
+
         //da sostituire con schermata riassunto
         //HO SOSTITUITO VEDI SE VA BENE
         switchToComponenti(ae);

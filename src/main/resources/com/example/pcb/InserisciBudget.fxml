@@ -8,24 +8,24 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.pcb.ConfermaRisposte">
+<AnchorPane minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.pcb.InserisciBudgetGUI">
    <children>
       <ImageView fitHeight="720.0" fitWidth="1280.0">
          <image>
             <Image url="@6839531-grey-wallpaper.jpg" />
          </image>
       </ImageView>
-      <Button fx:id="budgetButton3" layoutX="737.0" layoutY="496.0" mnemonicParsing="false" prefHeight="77.0" prefWidth="228.0" text="Conferma">
+      <Button fx:id="budgetButton5" layoutX="796.0" layoutY="465.0" mnemonicParsing="false" onAction="#modificaValoreBudget" prefHeight="77.0" prefWidth="206.0" text="Conferma">
          <font>
             <Font size="36.0" />
          </font>
       </Button>
-      <Button fx:id="budgetButton1" layoutX="371.0" layoutY="496.0" mnemonicParsing="false" onAction="#switchToBudget" prefHeight="77.0" prefWidth="228.0" text="Annulla">
+      <Button fx:id="budgetButton4" layoutX="328.0" layoutY="465.0" mnemonicParsing="false" onAction="#switchToModificaBudget" prefHeight="77.0" prefWidth="206.0" text="Annulla">
          <font>
             <Font size="36.0" />
          </font>
       </Button>
-      <Button layoutX="53.0" layoutY="535.0" mnemonicParsing="false" onAction="#switchToUserProfile" style="-fx-background-color: transparent; -fx-text-fill: transparent; -fx-border-fill: transparent;" text="Button">
+      <Button layoutX="66.0" layoutY="540.0" mnemonicParsing="false" onAction="#switchToAdminProfile" style="-fx-background-color: transparent; -fx-text-fill: transparent; -fx-border-fill: transparent;" text="Button">
          <graphic>
             <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
                <image>
@@ -34,7 +34,7 @@
             </ImageView>
          </graphic>
       </Button>
-      <Text fill="#ccfd09" layoutX="1068.0" layoutY="87.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Resoconto">
+      <Text fill="#ccfd09" layoutX="946.0" layoutY="87.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Inserisci Budget">
          <font>
             <Font size="36.0" />
          </font>
@@ -44,7 +44,7 @@
             <Image url="@Logo.jpeg" />
          </image>
       </ImageView>
-      <Button layoutX="1031.0" layoutY="535.0" mnemonicParsing="false" onAction="#switchToEntry" style="-fx-background-color: transparent; -fx-text-fill: transparent; -fx-border-fill: transparent;" text="Button">
+      <Button layoutX="1074.0" layoutY="540.0" mnemonicParsing="false" onAction="#switchToEntry" style="-fx-background-color: transparent; -fx-text-fill: transparent; -fx-border-fill: transparent;" text="Button">
          <graphic>
             <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
                <image>
@@ -53,17 +53,18 @@
             </ImageView>
          </graphic>
       </Button>
-      <TextField fx:id="budgetTextField" layoutX="404.0" layoutY="290.0" />
-      <TextField fx:id="utilizzoTextField" layoutX="796.0" layoutY="289.0" />
-      <Text fill="LIME" layoutX="308.0" layoutY="186.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Budget Selezionato">
+      <TextField fx:id="oldBudget" layoutX="347.0" layoutY="329.0" />
+      <TextField fx:id="newBudget" layoutX="806.0" layoutY="329.0" promptText="Inserire Budget" />
+      <Text layoutX="358.0" layoutY="257.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Budget Attuale">
          <font>
-            <Font size="36.0" />
+            <Font size="22.0" />
          </font>
       </Text>
-      <Text fill="LIME" layoutX="738.0" layoutY="186.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Utilizzo Selezionato">
+      <Text layoutX="813.0" layoutY="257.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nuovo Budget">
          <font>
-            <Font size="36.0" />
+            <Font size="22.0" />
          </font>
       </Text>
+      <TextField fx:id="obsTextField" layoutX="580.0" layoutY="221.0" />
    </children>
 </AnchorPane>

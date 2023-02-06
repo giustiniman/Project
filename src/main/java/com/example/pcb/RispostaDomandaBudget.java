@@ -16,9 +16,9 @@ import java.util.Objects;
 public class RispostaDomandaBudget {
 
 
-   // public boolean rispostaBudget;
-    public BudgetBean budgetBean;
 
+    public BeanBudget budgetBean;
+    public static DomandeUtente domandeUtente= new DomandeUtente();
     private Stage stage;
     private Scene scene;
     private Parent root;
@@ -74,12 +74,13 @@ public class RispostaDomandaBudget {
         String risposta = ((Button)ae.getSource()).getText();
         System.out.println("Budget selezionato: " + risposta);
 
-        BudgetBean b = new BudgetBean(risposta);
-        DomandeUtente domandeUtente= new DomandeUtente();
+        BeanBudget b = new BeanBudget(risposta);
+        DomandeUtente domandeUtente= new DomandeUtente(); //messo come attributo statico
         //domandeUtente.add();
-        b.returnID();
-
-        domandeUtente.attivo();
+        b.returnID(domandeUtente);
+        RispostaDomandaUtilizzo rispostaDomandaUtilizzo=new RispostaDomandaUtilizzo();
+        rispostaDomandaUtilizzo.selezionaRisposteUtilizzo(ae, domandeUtente);
+        //domandeUtente.attivo();
 
         switchToUtilizzo(ae);
     }

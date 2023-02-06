@@ -1,7 +1,6 @@
 package com.example.pcb;
 
 import javafx.event.ActionEvent;
-import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
@@ -15,7 +14,7 @@ import java.util.Objects;
 public class RispostaDomandaUtilizzo {
 
         public boolean rispostaBudget;
-        public BudgetBean budgetBean;
+        public BeanBudget budgetBean;
 
         private Stage stage;
         private Scene scene;
@@ -77,14 +76,16 @@ public class RispostaDomandaUtilizzo {
 
 
 
-        public void selezionaRisposteUtilizzo(ActionEvent ae) throws IOException {
+        public void selezionaRisposteUtilizzo(ActionEvent ae, DomandeUtente domandeUtente) throws IOException {
             String risposta = ((Button)ae.getSource()).getText();
 
-            UtilizzoBean u = new UtilizzoBean(risposta);
+            BeanUtilizzo u = new BeanUtilizzo(risposta);
 
 
+           ConfermaRisposte confermaRisposte=new ConfermaRisposte();
+           confermaRisposte.confermaRisposte(ae, domandeUtente);
 
-            u.returnStr();
+            u.returnStr(domandeUtente);
 
             switchToConferma(ae);
 

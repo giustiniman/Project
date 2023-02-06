@@ -1,55 +1,62 @@
 package com.example.pcb;
 
-public class DomandeUtente {
+public  class DomandeUtente {
     private static int budget;
-    private static int a;
-    String[] listaCaratteristicheUtilizzo= new String[9];
+    private String[] listaCaratteristicheUtilizzo= new String[9];
+    private Boolean confermatoRisposte = true;
 
     public DomandeUtente(){
 
     }
-    public void attivo(){
-        System.out.println(" ATTIVO CA");
-    }
-    /*
-    public void lavoraDomanda(BudgetBean b){
-        System.out.println("Sto elaborando domanda CA");
-        b.stampa();
 
-    }
-    public void lavoraDomanda(UtilizzoBean b){
-        System.out.println("Sto elaborando domanda CA");
-        b.stampa();
-    }
-    public void lavoraDomanda(ConfermaBean b){
-        System.out.println("Sto elaborando domanda CA");
-        b.stampa();
-    }*/
-    public static BudgetBean raccogliValoreB(int b){
+    public BeanBudget raccogliValoreB(int b){
         int budgetPreso=b;
-        a=0;
+        ConfermaBean confermaBean=new ConfermaBean();
+        /*
         System.out.println("Sto elaborando domanda "+ a +" BUDGET CA "+ budgetPreso);
-        //b.stampa();
-
+        BudgetBean budgetBean= new BudgetBean();
+        budgetBean.inviaU(utilizzoPreso);*/
+        confermaBean.inviaB(budgetPreso);
+        if(confermatoRisposte){
+            //DomandeUtente.inserisciBudget(budgetPreso);
+        }
         return null;
     }
-   /* public static int add(){
-        a=a+1;
-        return a;
-    }
-*/
 
-    public static UtilizzoBean raccogliValoreU(String b){
+    public BeanUtilizzo raccogliValoreU(String b){
         String utilizzoPreso=b;
+        ConfermaBean confermaBean=new ConfermaBean();
+        /*
         System.out.println("Sto elaborando domanda "+ a + " UTILIZZO CA "+utilizzoPreso);
-        //b.stampa();
+        BudgetBean budgetBean= new BudgetBean();
+        budgetBean.inviaU(utilizzoPreso);
+        */
+        confermaBean.inviaU(utilizzoPreso);
+        //confermaBean.confermaValoreR(utilizzoPreso);
+        if(confermatoRisposte){
+            DomandeUtente.inserisciUtilizzo(utilizzoPreso);
+        }
         return null;
     }
-    public static ConfermaBean raccogliValoreR(Boolean b){
+    public  ConfermaBean raccogliValoreR(Boolean b){
         Boolean confermaPresa=b;
         System.out.println("Sto elaborando domanda RISPOSTA CA "+ confermaPresa);
+        if(confermaPresa==true){
+            this.confermatoRisposte=true;
+        }
         return null;
     }
+
+    public static String inserisciUtilizzo(String utilizzoPreso) {
+        //DaoUtilizzi daoUtilizzi= new DaoUtilizzi(utilizzoPreso);
+        return null;
+    }
+
+    /*public static int inserisciBudget(int budgetPreso){
+        DaoBudget daoBudget=new DaoBudget(budgetPreso);
+        return budget;
+    }*/
+
 
 
 }
