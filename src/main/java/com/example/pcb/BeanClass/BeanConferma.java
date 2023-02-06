@@ -1,9 +1,11 @@
-package com.example.pcb;
+package com.example.pcb.BeanClass;
 
-public class ConfermaBean {
+import java.util.Objects;
 
-    Boolean conferma;
+public class BeanConferma {
 
+    public Boolean conferma;
+/*
     public ConfermaBean(String answer){
         if(answer.equals("Conferma")){
             this.conferma = true;
@@ -49,5 +51,16 @@ public class ConfermaBean {
 
     }
 
+*/
+    public BeanConferma(String risposta){
+        if(Objects.equals(risposta, "Conferma")){
+            this.conferma= true;
+        }else{
+            this.conferma= false;
+        }
 
+    }
+    public Boolean returnBool(){
+       return conferma;
+    }
 }

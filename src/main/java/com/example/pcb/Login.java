@@ -1,5 +1,6 @@
 package com.example.pcb;
 
+import com.example.pcb.DaoClass.DaoLoginConnection;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -58,7 +59,7 @@ public class Login {
 
     public void validateLogin(ActionEvent event){
 
-        Connection myConnection = DBConnection.getDBConnection();
+        Connection myConnection = DaoLoginConnection.getDBConnection();
         //Connection connectDB = (Connection) myConnection.getInstance();
 
         String verifyLoginQuery = "SELECT count(1), Role FROM UserAccounts WHERE username = '" + usernameTextField.getText() + "' AND password = '" + passwordPasswordField.getText() + "'";
