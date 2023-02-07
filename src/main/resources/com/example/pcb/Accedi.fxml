@@ -9,36 +9,35 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane minHeight="-Infinity" minWidth="-Infinity" prefHeight="1080.0" prefWidth="1920.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.pcb.Login">
+<AnchorPane minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.pcb.Login">
    <children>
-      <ImageView fitHeight="1080.0" fitWidth="1920.0">
+      <ImageView fitHeight="720.0" fitWidth="1280.0">
          <image>
             <Image url="@6839531-grey-wallpaper.jpg" />
          </image>
       </ImageView>
-      <ImageView fitHeight="414.0" fitWidth="554.0" layoutX="753.0" layoutY="49.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="347.0" fitWidth="338.0" layoutX="526.0" layoutY="31.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@9043073_rhombus_icon.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="270.0" fitWidth="218.0" layoutX="851.0" layoutY="147.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="270.0" fitWidth="218.0" layoutX="586.0" layoutY="82.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@309041_users_group_people_icon.png" />
          </image>
       </ImageView>
-      <Button layoutX="1520.0" layoutY="951.0" mnemonicParsing="false" prefHeight="64.0" prefWidth="173.0" text="Accedi con Google" />
-      <Button layoutX="892.0" layoutY="705.0" mnemonicParsing="false" onAction="#validateLogin" prefHeight="35.0" prefWidth="136.0" text="Accedi" />
-      <TextField fx:id="usernameTextField" layoutX="857.0" layoutY="561.0" prefHeight="47.0" prefWidth="206.0" promptText="Username" />
-      <Button layoutX="81.0" layoutY="901.0" mnemonicParsing="false" onAction="#switchToEntry" style="-fx-background-color: transparent; -fx-text-fill: transparent; -fx-border-fill: transparent;" text="Button">
+      <Button layoutX="1051.0" layoutY="607.0" mnemonicParsing="false" prefHeight="64.0" prefWidth="173.0" text="Accedi con Google" />
+      <Button layoutX="633.0" layoutY="551.0" mnemonicParsing="false" onAction="#validateLogin" prefHeight="35.0" prefWidth="136.0" text="Accedi" />
+      <TextField fx:id="usernameTextField" layoutX="598.0" layoutY="407.0" prefHeight="47.0" prefWidth="206.0" promptText="Username" />
+      <Button layoutX="40.0" layoutY="540.0" mnemonicParsing="false" onAction="#switchToEntry" style="-fx-background-color: transparent; -fx-text-fill: transparent; -fx-border-fill: transparent;" text="Button">
          <graphic>
             <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@216437_back_arrow_icon.png" />
                </image>
             </ImageView>
-         </graphic>
-      </Button>
-      <Text fill="#ccfd09" layoutX="1716.0" layoutY="63.0" strokeType="OUTSIDE" strokeWidth="0.0" text="LOG IN">
+         </graphic></Button>
+      <Text fill="#ccfd09" layoutX="1108.0" layoutY="62.0" strokeType="OUTSIDE" strokeWidth="0.0" text="LOG IN">
          <font>
             <Font size="36.0" />
          </font>
@@ -48,16 +47,16 @@
             <Image url="@Logo.jpeg" />
          </image>
       </ImageView>
-      <ImageView fitHeight="54.0" fitWidth="48.0" layoutX="808.0" layoutY="561.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="54.0" fitWidth="48.0" layoutX="549.0" layoutY="407.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@5340287_man_people_person_user_users_icon.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="48.0" fitWidth="68.0" layoutX="809.0" layoutY="621.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="48.0" fitWidth="68.0" layoutX="550.0" layoutY="467.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@3643767_key_keys_main_password_privilege_icon.png" />
          </image>
       </ImageView>
-      <PasswordField fx:id="passwordPasswordField" layoutX="857.0" layoutY="612.0" prefHeight="47.0" prefWidth="206.0" promptText="Password" />
+      <PasswordField fx:id="passwordPasswordField" layoutX="598.0" layoutY="458.0" prefHeight="47.0" prefWidth="206.0" promptText="Password" />
    </children>
 </AnchorPane>
