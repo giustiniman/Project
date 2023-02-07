@@ -1,6 +1,5 @@
 package com.example.pcb;
 
-import com.example.pcb.DaoClass.DaoLoginConnection;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -54,7 +53,7 @@ public class Registrazione {
 
     public void registerUser(ActionEvent event){
 
-        Connection myConnection = DaoLoginConnection.getDBConnection();
+        Connection myConnection = DBConnection.getDBConnection();
 
         String firstname = firstnameTextField.getText();
         String lastname = lastnameTextField.getText();

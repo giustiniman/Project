@@ -7,39 +7,39 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.pcb.RispostaDomandaUtilizzo">
+<AnchorPane minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.pcb.AdminUtilizziGUI">
    <children>
       <ImageView fitHeight="720.0" fitWidth="1280.0">
          <image>
             <Image url="@6839531-grey-wallpaper.jpg" />
          </image>
       </ImageView>
-      <Button layoutX="865.0" layoutY="438.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#selezionaRisposteUtilizzo" prefHeight="77.0" prefWidth="277.0" text="Illustratore">
+      <Button layoutX="865.0" layoutY="438.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#selezionaNomeUtilizzo" prefHeight="77.0" prefWidth="277.0" text="Illustratore">
          <font>
             <Font size="33.0" />
          </font>
       </Button>
-      <Button layoutX="246.0" layoutY="439.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#selezionaRisposteUtilizzo" prefHeight="77.0" prefWidth="277.0" text="Musicista">
+      <Button layoutX="246.0" layoutY="439.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#selezionaNomeUtilizzo" prefHeight="77.0" prefWidth="277.0" text="Musicista">
          <font>
             <Font size="33.0" />
          </font>
       </Button>
-      <Button layoutX="558.0" layoutY="307.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#selezionaRisposteUtilizzo" prefHeight="77.0" prefWidth="277.0" text="Studente">
+      <Button layoutX="558.0" layoutY="307.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#selezionaNomeUtilizzo" prefHeight="77.0" prefWidth="277.0" text="Studente">
          <font>
             <Font size="33.0" />
          </font>
       </Button>
-      <Button layoutX="860.0" layoutY="194.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#selezionaRisposteUtilizzo" prefHeight="77.0" prefWidth="277.0" text="Gaming">
+      <Button layoutX="860.0" layoutY="194.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#selezionaNomeUtilizzo" prefHeight="77.0" prefWidth="277.0" text="Gaming">
          <font>
             <Font size="33.0" />
          </font>
       </Button>
-      <Button layoutX="268.0" layoutY="194.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#selezionaRisposteUtilizzo" prefHeight="77.0" prefWidth="277.0" text="Professore">
+      <Button layoutX="268.0" layoutY="194.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#selezionaNomeUtilizzo" prefHeight="77.0" prefWidth="277.0" text="Professore">
          <font>
             <Font size="33.0" />
          </font>
       </Button>
-      <Button layoutX="46.0" layoutY="533.0" mnemonicParsing="false" onAction="#switchToBudget" style="-fx-background-color: transparent; -fx-text-fill: transparent; -fx-border-fill: transparent;" text="Button">
+      <Button layoutX="46.0" layoutY="533.0" mnemonicParsing="false" onAction="#switchToAdminProfile" style="-fx-background-color: transparent; -fx-text-fill: transparent; -fx-border-fill: transparent;" text="Button">
          <graphic>
             <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
                <image>
@@ -48,7 +48,7 @@
             </ImageView>
          </graphic>
       </Button>
-      <Text fill="#ccfd09" layoutX="935.0" layoutY="87.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Selezione Utilizzo">
+      <Text fill="#ccfd09" layoutX="935.0" layoutY="87.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Modifica Utilizzo">
          <font>
             <Font size="36.0" />
          </font>

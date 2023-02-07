@@ -1,7 +1,7 @@
 package com.example.pcb;
 
-import com.example.pcb.BeanClass.BeanBudget;
 import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
@@ -13,29 +13,32 @@ import javafx.stage.Stage;
 import java.io.IOException;
 import java.util.Objects;
 
-public class RispostaDomandaBudgetGUI {
+public class RispostaDomandaBudget {
 
 
 
     public BeanBudget budgetBean;
-
-    public static DomandeUtente domandeUtente;
+    public static DomandeUtente domandeUtente= new DomandeUtente();
     private Stage stage;
     private Scene scene;
     private Parent root;
 
     public void switchToUtilizzo(ActionEvent event) throws IOException {
-        //root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("Utilizzo.fxml")));
-        FXMLLoader loader = new FXMLLoader();
-        loader.setLocation(getClass().getResource("Utilizzo.fxml"));
-        loader.setControllerFactory(f -> new RispostaDomandaUtilizzoGUI(domandeUtente));
-        scene = new Scene(loader.load());
+        root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("Utilizzo.fxml")));
+        scene = new Scene(root);
         stage = (Stage)((Node)event.getSource()).getScene().getWindow();
         stage.setScene(scene);
         stage.show();
 
     }
+    public void switchToComponenti(ActionEvent event) throws IOException {
+        root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("Componenti.fxml")));
+        scene = new Scene(root);
+        stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+        stage.setScene(scene);
+        stage.show();
 
+    }
 
     public void switchToUserProfile(ActionEvent event) throws IOException {
         root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("UserProfile.fxml")));
@@ -54,20 +57,31 @@ public class RispostaDomandaBudgetGUI {
         stage.show();
     }
 
+    public void switchToBudget( ActionEvent event) throws IOException {
+        root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("Budget.fxml")));
+        scene = new Scene(root);
+        stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+        stage.setScene(scene);
+        stage.show();
+
+
+    }
+
+
+
 
     public void selezionaRisposteBudget(ActionEvent ae) throws IOException {
         String risposta = ((Button)ae.getSource()).getText();
-
-        System.out.println("CG  Budget selezionato: " + risposta);
+        System.out.println("Budget selezionato: " + risposta);
 
         BeanBudget b = new BeanBudget(risposta);
-        domandeUtente= new DomandeUtente();
-        //RispostaDomandaUtilizzo u = new RispostaDomandaUtilizzo(domandeUtente);
+        DomandeUtente domandeUtente= new DomandeUtente(); //messo come attributo statico
+        //domandeUtente.add();
+        b.returnID(domandeUtente);
+        RispostaDomandaUtilizzo rispostaDomandaUtilizzo=new RispostaDomandaUtilizzo();
+        rispostaDomandaUtilizzo.selezionaRisposteUtilizzo(ae, domandeUtente);
+        //domandeUtente.attivo();
 
-        //u.set(domandeUtente);
-
-        //b.returnID();
-        domandeUtente.prendB(b);
         switchToUtilizzo(ae);
     }
 

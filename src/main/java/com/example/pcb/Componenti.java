@@ -10,7 +10,7 @@ import javafx.stage.Stage;
 import java.io.IOException;
 import java.util.Objects;
 
-public class ComponentiGUI {
+public class Componenti {
 
     private Stage stage;
     private Scene scene;

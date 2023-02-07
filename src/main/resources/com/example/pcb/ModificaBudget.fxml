@@ -7,39 +7,39 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.pcb.RispostaDomandaBudget">
+<AnchorPane minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.pcb.AdminBudgetGUI">
    <children>
       <ImageView fitHeight="720.0" fitWidth="1280.0">
          <image>
             <Image url="@6839531-grey-wallpaper.jpg" />
          </image>
       </ImageView>
-      <Button fx:id="budgetButton5" layoutX="801.0" layoutY="449.0" mnemonicParsing="false" onAction="#selezionaRisposteBudget" prefHeight="66.0" prefWidth="160.0" text="€€€€€">
+      <Button fx:id="budgetButton5" layoutX="801.0" layoutY="449.0" mnemonicParsing="false" onAction="#selezionaValoreBudget" prefHeight="66.0" prefWidth="160.0" text="€€€€€">
          <font>
             <Font size="36.0" />
          </font>
       </Button>
-      <Button fx:id="budgetButton4" layoutX="345.0" layoutY="426.0" mnemonicParsing="false" onAction="#selezionaRisposteBudget" prefHeight="66.0" prefWidth="160.0" text="€€€€">
+      <Button fx:id="budgetButton4" layoutX="345.0" layoutY="426.0" mnemonicParsing="false" onAction="#selezionaValoreBudget" prefHeight="66.0" prefWidth="160.0" text="€€€€">
          <font>
             <Font size="36.0" />
          </font>
       </Button>
-      <Button fx:id="budgetButton3" layoutX="575.0" layoutY="323.0" mnemonicParsing="false" onAction="#selezionaRisposteBudget" prefHeight="66.0" prefWidth="160.0" text="€€€">
+      <Button fx:id="budgetButton3" layoutX="575.0" layoutY="323.0" mnemonicParsing="false" onAction="#selezionaValoreBudget" prefHeight="66.0" prefWidth="160.0" text="€€€">
          <font>
             <Font size="36.0" />
          </font>
       </Button>
-      <Button fx:id="budgetButton2" layoutX="801.0" layoutY="176.0" mnemonicParsing="false" onAction="#selezionaRisposteBudget" prefHeight="66.0" prefWidth="160.0" text="€€">
+      <Button fx:id="budgetButton2" layoutX="801.0" layoutY="176.0" mnemonicParsing="false" onAction="#selezionaValoreBudget" prefHeight="66.0" prefWidth="160.0" text="€€">
          <font>
             <Font size="36.0" />
          </font>
       </Button>
-      <Button fx:id="budgetButton1" layoutX="345.0" layoutY="176.0" mnemonicParsing="false" onAction="#selezionaRisposteBudget" prefHeight="66.0" prefWidth="160.0" text="€">
+      <Button fx:id="budgetButton1" layoutX="345.0" layoutY="176.0" mnemonicParsing="false" onAction="#selezionaValoreBudget" prefHeight="66.0" prefWidth="160.0" text="€">
          <font>
             <Font size="36.0" />
          </font>
       </Button>
-      <Button layoutX="66.0" layoutY="540.0" mnemonicParsing="false" onAction="#switchToUserProfile" style="-fx-background-color: transparent; -fx-text-fill: transparent; -fx-border-fill: transparent;" text="Button">
+      <Button layoutX="66.0" layoutY="540.0" mnemonicParsing="false" onAction="#switchToAdminProfile" style="-fx-background-color: transparent; -fx-text-fill: transparent; -fx-border-fill: transparent;" text="Button">
          <graphic>
             <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
                <image>
@@ -48,7 +48,7 @@
             </ImageView>
          </graphic>
       </Button>
-      <Text fill="#ccfd09" layoutX="946.0" layoutY="87.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Selezione Budget">
+      <Text fill="#ccfd09" layoutX="946.0" layoutY="87.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Modifica Budget">
          <font>
             <Font size="36.0" />
          </font>

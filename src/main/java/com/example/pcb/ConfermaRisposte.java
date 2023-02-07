@@ -1,9 +1,5 @@
 package com.example.pcb;
 
-import com.example.pcb.BeanClass.BeanBudget;
-import com.example.pcb.BeanClass.BeanConferma;
-import com.example.pcb.BeanClass.BeanMostraResoconto;
-import com.example.pcb.DomandeUtente;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -17,12 +13,11 @@ import javafx.stage.Stage;
 import java.io.IOException;
 import java.util.Objects;
 
-public class ConfermaRisposteGUI {
+public class ConfermaRisposte {
 
     public boolean rispostaBudget;
     public BeanBudget budgetBean;
-    public DomandeUtente riferimentoCapplicativo;
-    public BeanMostraResoconto mostraResoconto;
+
     private Stage stage;
     private Scene scene;
     private Parent root;
@@ -33,15 +28,15 @@ public class ConfermaRisposteGUI {
     @FXML
     private TextField utilizzoTextField;
 
-    public ConfermaRisposteGUI(DomandeUtente istanzaCA) {
-        this.riferimentoCapplicativo=istanzaCA;
+
+    public void switchToUtilizzo(ActionEvent event) throws IOException {
+        root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("Utilizzo.fxml")));
+        scene = new Scene(root);
+        stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+        stage.setScene(scene);
+        stage.show();
+
     }
-
-    //prova
-    public ConfermaRisposteGUI() {
-
-    }
-
     public void switchToComponenti(ActionEvent event) throws IOException {
         root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("Componenti.fxml")));
         scene = new Scene(root);
@@ -77,46 +72,32 @@ public class ConfermaRisposteGUI {
 
     }
 
-    public void vaiAComponenti(ActionEvent ae) throws IOException {
+    public void switchToConferma(ActionEvent event) throws IOException {
+        root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("Conferma.fxml")));
+        scene = new Scene(root);
+        stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+        stage.setScene(scene);
+        stage.show();
+
+    }
 
 
+
+
+
+    public void confermaRisposte(ActionEvent ae,DomandeUtente domandeUtente) throws IOException {
+        //switchToConferma(ae);
         String risposta = ((Button)ae.getSource()).getText();
-        System.out.println("CG Conferma selezionato:" + risposta);
-        BeanConferma beanConferma = new BeanConferma(risposta);
+
+        ConfermaBean c = new ConfermaBean(risposta);
 
 
+        c.conferma(domandeUtente);
 
-        //stampa(mostraResoconto);
-        if (Objects.equals(risposta, "Conferma")){
-            riferimentoCapplicativo.prendC(beanConferma);
-            switchToComponenti(ae);
-        }
-        else /*if (!Objects.equals(risposta, "Conferma"))*/{
-            switchToBudget(ae);
-        }
-
-
-    }
-    public void crea(){
-        //System.out.println(" CREA() IN ESECUZIONE");
-        this.mostraResoconto=new BeanMostraResoconto();
-        //System.out.println("CG  indirizzo mostraResoconto Bean  " + mostraResoconto);
-        riferimentoCapplicativo.getMostraResoconto(mostraResoconto);
-        stampa(mostraResoconto);
+        //da sostituire con schermata riassunto
+        //HO SOSTITUITO VEDI SE VA BENE
+        switchToComponenti(ae);
 
     }
 
-    public void stampa(BeanMostraResoconto mR) {
-
-
-        String budget= mR.returnStampaB();
-        String utilizzo= mR.returnStampaU();
-        System.out.println("ricevo per mostrare B "+ budget);
-        System.out.println("ricevo per mostrare U "+ utilizzo);
-
-        budgetTextField.setText(budget);
-        utilizzoTextField.setText(utilizzo);
-
-
-    }
 }
